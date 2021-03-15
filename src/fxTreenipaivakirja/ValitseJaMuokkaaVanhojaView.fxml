@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ComboBoxChooser?>
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxTreenipaivakirja.ValitseJaMuokkaaVanhojaController">
+   <children>
+      <BorderPane>
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Hakuehto" />
+                  <TextField />
+                  <ComboBoxChooser prefHeight="25.0" prefWidth="209.0" rivit="laji&#10;kesto&#10;paikka&#10;olosuhde&#10;päivämäärä" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <ListChooser prefHeight="247.0" prefWidth="196.0" rivit="09.01.2018&#10;10.01.2018&#10;13.01.2018&#10;14.01.2018&#10;22.01.2018&#10;23.01.2018&#10;24.01.2018&#10;26.01.2018&#10;27.01.2018&#10;29.01.2018" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </right>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </BorderPane>
+      <BorderPane>
+         <top>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Päivämäärä" />
+                  <Label text="Kesto" GridPane.columnIndex="2" />
+                  <Label text="Laji" GridPane.columnIndex="1" />
+                  <Label text="Paikka" GridPane.columnIndex="3" />
+                  <Label text="Olosuhteet" GridPane.columnIndex="4" />
+                  <Label GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </top>
+         <center>
+            <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#handleMuokkaa" text="Muokkaa" />
+                  <Button mnemonicParsing="false" onAction="#handlePoista" text="Poista" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets right="5.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>
